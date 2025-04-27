@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cuprum", sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-color: gainsboro;
+}
+
+#nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* soft shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+#navLeft {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+#navRight {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+
+#nav h3,
+#nav h2,
+#nav h4 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#nav h4 {
+    cursor: pointer;
+}
+
+#content {
+    padding: 40px 65px;
+    margin-top: 60px;
+}
+
+#content h3 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#content h1 {
+    font-size: 130px;
+    font-weight: 600;
+    line-height: 120px;
+    letter-spacing: px;
+    margin-top: 20px;
+}
+
+#case {
+    padding: 40px 65px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#case h4,
+#case h5 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+#case>#right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#line {
+    background-color: black;
+    height: 2px;
+    width: 200px;
+}
+
+#projects{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#projectLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+#projectLeft img, #projectRight img{
+    width: 600px;
+    height: 600px;
+    border-radius: 20px;
+}
+
+#some{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+#someRight>i{
+    border: 2px solid black;
+    padding: 12px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#someRight>i:hover{
+    background-color: black;
+    color: white;
+}
