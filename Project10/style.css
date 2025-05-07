@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Anton", sans-serif;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(17, 17, 17);
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main img{
+    height: 800px;
+    width: 650px;
+    object-fit: cover;
+    position: relative;
+    z-index: 99;
+}
+
+#nav{
+    position: absolute;
+    top: 3%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+#nav h3, span{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#left h3, #right span{
+    letter-spacing: 3px;
+} 
+
+#right span {
+    cursor: pointer;
+}
+
+#middle h3{
+    color: #9b9b9b;
+    letter-spacing: 1px;
+}
+
+#scroll-div-upper{
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div-upper::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div-upper h1{
+    display: inline-block;
+    font-size: 140px;
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing:10px;
+    color: #92929252;
+    animation-name: scroll-right;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll-div-middle{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: auto;
+    overflow-y: hidden;
+    z-index: 100;
+}
+
+#scroll-div-middle::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div-middle h1{
+    display: inline-block;
+    font-size: 140px;
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing:10px;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: #fff;
+    color: transparent;
+    animation-name: scroll-right;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll-div-bottom{
+    position: absolute;
+    top: 65%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-y: auto;
+    overflow-y: hidden;
+}
+
+#scroll-div-bottom::-webkit-scrollbar{
+    display: none;
+}
+
+#scroll-div-bottom h1{
+    display: inline-block;
+    font-size: 140px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing:10px;
+    color: #92929252;
+    animation-name: scroll-left;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#placed-content{
+    position: absolute;
+    top: 14%;
+    z-index: 101;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#placed-content>h2{
+    text-align: center;
+    width: 55%;
+}
+
+@keyframes scroll-right{
+    0%{
+        transform: translateX(calc(-100% - 32px));
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes scroll-left{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-100% - 32px));
+    }
+}
